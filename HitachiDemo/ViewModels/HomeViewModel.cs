@@ -1,4 +1,4 @@
-﻿using HitachiDemo.Models;
+﻿using ContosoBeacons.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace HitachiDemo.ViewModels
+namespace ContosoBeacons.ViewModels
 {
     public class HomeViewModel : ObservableObject
     {       

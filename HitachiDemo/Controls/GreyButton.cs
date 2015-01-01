@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace HitachiDemo.Controls
+namespace ContosoBeacons.Controls
 {
     public class GreyButton : Button
     {

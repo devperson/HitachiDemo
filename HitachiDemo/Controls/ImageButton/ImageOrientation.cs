@@ -1,5 +1,5 @@
 ﻿
-namespace HitachiDemo.Controls
+namespace ContosoBeacons.Controls
 {
     /// <summary>
     /// Specifies where the image will occur relative to the text on a

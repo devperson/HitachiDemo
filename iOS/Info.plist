@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>HitachiDemo.iOS</string>
+	<string>ContosoBeacons.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.HitachiDemo.iOS</string>
+	<string>com.your-company.ContosoBeacons.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

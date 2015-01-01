@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace HitachiDemo.Controls
+namespace ContosoBeacons.Controls
 {
     /// <summary>
     /// Creates an <see cref="ImageSource"/> from the a string

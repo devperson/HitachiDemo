@@ -1,5 +1,5 @@
-﻿using HitachiDemo.Controls;
-using HitachiDemo.ViewModels;
+﻿using ContosoBeacons.Controls;
+using ContosoBeacons.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace HitachiDemo.Pages
+namespace ContosoBeacons.Pages
 {
     public class HomePage : ContentPage
     {
@@ -22,17 +22,17 @@ namespace HitachiDemo.Pages
             this.BindingContext = App.Locator.HomeViewModel;
 
             btnMenu.Clicked += (s, e) =>
-                {
-                    if (popupLayout.TranslationX == -400)
-                        popupLayout.TranslateTo(0, 0);
-                    else popupLayout.TranslateTo(-400, 0);
-                };
+            {
+                if (popupLayout.TranslationX == -400)
+                    popupLayout.TranslateTo(0, 0);
+                else popupLayout.TranslateTo(-400, 0);
+            };
 
             btnLogo.Clicked += (s, e) =>
-                {
-                    showHome1 = !showHome1;
-                    middleContent.Content = this.GetMiddleContent();
-                };
+            {
+                showHome1 = !showHome1;
+                middleContent.Content = this.GetMiddleContent();
+            };
         }
 
         private void Initialize()
@@ -212,19 +212,21 @@ namespace HitachiDemo.Pages
                     FontSize = 14
                 }
             }, 0, 2);
+            var greyBtn = new GreyButton()
+            {
+                Text = "Find more VIP Benefits",
+                FontSize = 12,
+                TextColor = Color.Black,
+                ImageName = "greyBtn.png",
+                WidthRequest = 160,
+                HeightRequest = 35
+            };
+            greyBtn.Clicked += greyBtn_Clicked;
             layout.Children.Add(new ContentView()
             {
                 Padding = new Thickness(10, 5, 5, 10),
                 HorizontalOptions = LayoutOptions.Start,
-                Content = new GreyButton()
-                {
-                    Text = "Find more VIP Benefits",
-                    FontSize = 12,
-                    TextColor = Color.Black,
-                    ImageName = "greyBtn.png",
-                    WidthRequest = 160,
-                    HeightRequest = 35
-                }
+                Content = greyBtn            
             }, 0, 3);       
 
             return layout;
@@ -268,6 +270,11 @@ namespace HitachiDemo.Pages
                             Text = text,
                             HasLineBreak = true
                         };
+        }
+
+        private void greyBtn_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new ScreensCarouselPage(1), true);
         }
     }
 }

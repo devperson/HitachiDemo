@@ -1,6 +1,6 @@
 ﻿
 
-namespace HitachiDemo.Controls
+namespace ContosoBeacons.Controls
 {
     using System;
     using System.Linq.Expressions;
