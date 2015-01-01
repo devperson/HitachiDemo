@@ -53,12 +53,13 @@ namespace ContosoBeacons.iOS.Renderers
             if (imageButton != null && targetButton != null && imageButton.Source != null)
             {
                 if (imageButton.HasLineBreak)
-                {
+                {                    
                     targetButton.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap | UILineBreakMode.TailTruncation;
                     targetButton.TitleLabel.Lines = 0;
+                    targetButton.TitleLabel.HighlightedTextColor = UIColor.White;
                 }
-                
-                await SetImageAsync(imageButton.Source, this.GetWidth(imageButton.ImageWidthRequest), this.GetHeight(imageButton.ImageHeightRequest), targetButton);
+
+                await SetImageAsync(imageButton.Source, this.GetWidth(imageButton.ImageWidthRequest), this.GetHeight(imageButton.ImageHeightRequest), targetButton);                
 
                 switch (imageButton.Orientation)
                 {
@@ -94,7 +95,7 @@ namespace ContosoBeacons.iOS.Renderers
                     var imageButton = this.CurrentImageButton;
                     var targetButton = Control;
                     if (imageButton != null && targetButton != null && imageButton.Source != null)
-                    {
+                    {                        
                         await SetImageAsync(imageButton.Source, imageButton.ImageWidthRequest, imageButton.ImageHeightRequest, targetButton);
                     }
                 }
@@ -218,9 +219,8 @@ namespace ContosoBeacons.iOS.Renderers
                 if (heightRequest > 0 && widthRequest > 0 && (image.Size.Height != heightRequest || image.Size.Width != widthRequest))
                 {
                     scaled = scaled.Scale(new SizeF(widthRequest, heightRequest));
-                }
-                targetButton.SetImage(scaled.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Normal);
-                //targetButton.SetImage(scaled.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Selected);
+                }                
+                targetButton.SetImage(scaled.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Normal);                               
             }
         }
 

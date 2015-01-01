@@ -248,10 +248,24 @@ namespace ContosoBeacons.Pages
             return layout;
         }
 
-        private StackLayout CreateFooterButton(string text, int index, string imageName)//, double imgHeight, double imgWidth)
+        private View CreateFooterButton(string text, int index, string imageName)//, double imgHeight, double imgWidth)
         {
-            StackLayout panel = new StackLayout() { BackgroundColor = Color.Red, Padding = new Thickness(0, 10, 0, 0) };
+            Grid panel = new Grid() { BackgroundColor = Color.Red, Padding = new Thickness(0, 10, 0, 0) };
             var button = new ImageButton
+            {
+                ImageHeightRequest = 40,
+                ImageWidthRequest = 40,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Orientation = ImageOrientation.ImageOnTop,
+                Text = text,
+                FontSize = 13,
+                TextColor = Color.White,
+                BackgroundColor = Color.Transparent,
+                Source = ImageSource.FromFile(imageName)
+            };
+
+            var backgroundButton = new ImageButton //Fix. There is no way to remove pressed state on button
             {
                 ImageHeightRequest = 40,
                 ImageWidthRequest = 40,
@@ -267,17 +281,20 @@ namespace ContosoBeacons.Pages
             
             button.Clicked += (s, e) =>
             {
-
-                this.Navigation.PushAsync(new ScreensCarouselPage(index), true);
-                //this.Navigation.PushAsync(new ScreensCarouselPage(index), true);
+                this.Navigation.PushAsync(new ScreensCarouselPage(index), true);                
             };
 
             if (text.StartsWith("My") || text.StartsWith("Gift"))
+            {
                 button.ImageEdgeInsets = new Rectangle(0, 28, 0, 0);
-            panel.Children.Add(button);
+                backgroundButton.ImageEdgeInsets = new Rectangle(0, 28, 0, 0);
+            }
+            panel.Children.Add(backgroundButton, 0, 0);
+            panel.Children.Add(button, 0, 0);
+            
             return panel;
-        }        
-
+        }
+        
         private ImageButton CreateMiddleButton(string text, string imageName)
         {
             return new ImageButton()
