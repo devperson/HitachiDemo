@@ -55,8 +55,7 @@ namespace ContosoBeacons.iOS.Renderers
                 if (imageButton.HasLineBreak)
                 {                    
                     targetButton.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap | UILineBreakMode.TailTruncation;
-                    targetButton.TitleLabel.Lines = 0;
-                    targetButton.TitleLabel.HighlightedTextColor = UIColor.White;
+                    targetButton.TitleLabel.Lines = 0;                    
                 }
 
                 await SetImageAsync(imageButton.Source, this.GetWidth(imageButton.ImageWidthRequest), this.GetHeight(imageButton.ImageHeightRequest), targetButton);                
