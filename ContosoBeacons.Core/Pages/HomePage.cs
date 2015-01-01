@@ -276,7 +276,8 @@ namespace ContosoBeacons.Pages
                 FontSize = 13,
                 TextColor = Color.White,
                 BackgroundColor = Color.Transparent,
-                Source = ImageSource.FromFile(imageName)
+                Source = ImageSource.FromFile(imageName),
+                Opacity = 0.7
             };
             
             button.Clicked += (s, e) =>
