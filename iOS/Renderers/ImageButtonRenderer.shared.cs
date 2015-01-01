@@ -2,15 +2,15 @@ using Xamarin.Forms;
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
 
-namespace HitachiDemo.Android.Renderers
+namespace ContosoBeacons.Android.Renderers
 #elif __IOS__
 using Xamarin.Forms.Platform.iOS;
 
-namespace HitachiDemo.iOS.Renderers
+namespace ContosoBeacons.iOS.Renderers
 #elif WINDOWS_PHONE
 
 
-namespace HitachiDemo.WP8.Renderers.ImageButton
+namespace ContosoBeacons.WP8.Renderers.ImageButton
 #endif
 
 {

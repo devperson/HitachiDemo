@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("HitachiDemo.Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("ContosoBeacons.Android.Resource", IsApplication=true)]
 
-namespace HitachiDemo.Android
+namespace ContosoBeacons.Android
 {
 	
 	

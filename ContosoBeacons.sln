@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HitachiDemo", "HitachiDemo\HitachiDemo.csproj", "{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}"
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoBeacons", "HitachiDemo\ContosoBeacons.csproj", "{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HitachiDemo.iOS", "iOS\HitachiDemo.iOS.csproj", "{62D37D1A-F026-413F-9ED3-333BACB0307B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoBeacons.iOS", "iOS\ContosoBeacons.iOS.csproj", "{62D37D1A-F026-413F-9ED3-333BACB0307B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HitachiDemo.Android", "Android\HitachiDemo.Android.csproj", "{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoBeacons.Android", "Android\ContosoBeacons.Android.csproj", "{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,7 +95,7 @@ Global
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\HitachiDemo.iOS.csproj
+		StartupItem = iOS\ContosoBeacons.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

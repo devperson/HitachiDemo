@@ -7,7 +7,7 @@ using UIKit;
 
 using Xamarin.Forms;
 
-namespace HitachiDemo.iOS
+namespace ContosoBeacons.iOS
 {
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : UIApplicationDelegate

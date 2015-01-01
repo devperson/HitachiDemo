@@ -1,2 +1,13 @@
 /iOS/*.user
 /HitachiDemo/HitachiDemo.csproj.user
+/iOS/obj
+/iOS/bin
+/HitachiDemo/obj
+/HitachiDemo/bin
+/Android/obj
+/Android/bin
+/HitachiDemo.v12.suo
+/ContosoBeacons.userprefs
+/ContosoBeacons.v12.suo
+/HitachiDemo.userprefs
+/.DS_Store

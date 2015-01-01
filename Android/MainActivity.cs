@@ -11,9 +11,9 @@ using Android.OS;
 using Xamarin.Forms.Platform.Android;
 
 
-namespace HitachiDemo.Android
+namespace ContosoBeacons.Android
 {
-	[Activity (Label = "HitachiDemo.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "ContosoBeacons.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

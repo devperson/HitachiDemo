@@ -1,4 +1,4 @@
-﻿using HitachiDemo.Models;
+﻿using ContosoBeacons.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace HitachiDemo.Pages
+namespace ContosoBeacons.Pages
 {
     public class ScreensCarouselPage : CarouselPage
     {

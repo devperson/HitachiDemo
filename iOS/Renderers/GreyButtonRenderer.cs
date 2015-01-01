@@ -6,12 +6,12 @@ using System.Text;
 using Foundation;
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
-using HitachiDemo.Controls;
+using ContosoBeacons.Controls;
 using Xamarin.Forms;
-using HitachiDemo.iOS.Renderers;
+using ContosoBeacons.iOS.Renderers;
 
 [assembly: ExportRenderer(typeof(GreyButton), typeof(GreyButtonRenderer))]
-namespace HitachiDemo.iOS.Renderers
+namespace ContosoBeacons.iOS.Renderers
 {
     public class GreyButtonRenderer : ButtonRenderer
 	{

@@ -1,5 +1,5 @@
-﻿using HitachiDemo.Controls;
-using HitachiDemo.ViewModels;
+﻿using ContosoBeacons.Controls;
+using ContosoBeacons.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace HitachiDemo.Pages
+namespace ContosoBeacons.Pages
 {
     public class HomePage : ContentPage
     {
@@ -16,27 +16,34 @@ namespace HitachiDemo.Pages
         private Grid popupLayout;
         private Button btnMenu, btnLogo;
         private GreyButton btnBenefit;
+        private SwipedImage imgOnPopup;
         public HomePage()
         {            
             this.Initialize();
             this.BindingContext = App.Locator.HomeViewModel;
 
             btnMenu.Clicked += (s, e) =>
-                {
-                    if (popupLayout.TranslationX == -400)
-                        popupLayout.TranslateTo(0, 0);
-                    else popupLayout.TranslateTo(-400, 0);
-                };
+            {
+                if (popupLayout.TranslationX == -400)
+                    popupLayout.TranslateTo(0, 0);
+                else popupLayout.TranslateTo(-400, 0);
+            };
 
             btnLogo.Clicked += (s, e) =>
-                {
-                    showHome1 = !showHome1;
-                    middleContent.Content = this.GetMiddleContent();
-                };
+            {
+                showHome1 = !showHome1;
+                middleContent.Content = this.GetMiddleContent();
+            };
 
             btnBenefit.Clicked += (s, e) =>
                 {
                     this.Navigation.PushAsync(new ScreensCarouselPage(1), true);
+                };
+
+            imgOnPopup.Swiped += (s, e) =>
+                {
+                    if (popupLayout.TranslationX == 0)
+                        popupLayout.TranslateTo(-400, 0);
                 };
         }
 
@@ -190,13 +197,15 @@ namespace HitachiDemo.Pages
             layout.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
             layout.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
 
-            layout.Children.Add(new Image
+            imgOnPopup = new SwipedImage
             {
                 Source = ImageSource.FromFile(Device.OnPlatform("popup.png", "popup.png", "Images/popup.png")),
                 Aspect = Aspect.AspectFill,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand
-            }, 0, 1, 0, 4);
+            };
+
+            layout.Children.Add(imgOnPopup, 0, 1, 0, 4);
             layout.Children.Add(new ContentView()
             {
                 Padding = new Thickness(10, 5, 5, 5),
@@ -282,6 +291,18 @@ namespace HitachiDemo.Pages
                             Text = text,
                             HasLineBreak = true
                         };
+        }
+
+    }
+
+
+    public class SwipedImage : Image 
+    {
+        public event EventHandler Swiped;
+        public void OnSwiped()
+        {
+            if (Swiped != null)
+                Swiped(null, null);
         }
     }
 }

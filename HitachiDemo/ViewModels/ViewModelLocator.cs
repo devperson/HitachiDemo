@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HitachiDemo.ViewModels
+namespace ContosoBeacons.ViewModels
 {
     public class ViewModelLocator
     {

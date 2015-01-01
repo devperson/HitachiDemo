@@ -8,12 +8,12 @@ using MonoTouch.UIKit;
 #endif
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using HitachiDemo.Controls;
-using HitachiDemo.iOS.Renderers;
+using ContosoBeacons.Controls;
+using ContosoBeacons.iOS.Renderers;
 
 
 [assembly: ExportRenderer(typeof(ImageButton), typeof(ImageButtonRenderer))]
-namespace HitachiDemo.iOS.Renderers
+namespace ContosoBeacons.iOS.Renderers
 {
     using System.Threading.Tasks;
 

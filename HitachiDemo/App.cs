@@ -1,9 +1,9 @@
-﻿using HitachiDemo.Pages;
-using HitachiDemo.ViewModels;
+﻿using ContosoBeacons.Pages;
+using ContosoBeacons.ViewModels;
 using System;
 using Xamarin.Forms;
 
-namespace HitachiDemo
+namespace ContosoBeacons
 {
 	public class App
 	{
