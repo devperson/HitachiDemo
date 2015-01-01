@@ -163,8 +163,9 @@ namespace HitachiDemo.iOS.Renderers
             }
             //we hard code this UIEdgeInsets for Red buttons(in home page)
             targetButton.TitleEdgeInsets = new UIEdgeInsets(60, -38, 0, 0);
-            targetButton.ImageEdgeInsets = new UIEdgeInsets(0, 28, 0, 0);
-
+            if(CurrentImageButton.ImageEdgeInsets != Xamarin.Forms.Rectangle.Zero)
+                targetButton.ImageEdgeInsets = new UIEdgeInsets((float)CurrentImageButton.ImageEdgeInsets.Left, (float)CurrentImageButton.ImageEdgeInsets.Top, (float)CurrentImageButton.ImageEdgeInsets.Right, (float)CurrentImageButton.ImageEdgeInsets.Bottom);
+            else targetButton.ImageEdgeInsets = new UIEdgeInsets(0, 28, 0, 0);
         }
 
         /// <summary>
@@ -218,7 +219,8 @@ namespace HitachiDemo.iOS.Renderers
                 {
                     scaled = scaled.Scale(new SizeF(widthRequest, heightRequest));
                 }
-                targetButton.SetImage(scaled.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Normal);   
+                targetButton.SetImage(scaled.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Normal);
+                //targetButton.SetImage(scaled.ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Selected);
             }
         }
 

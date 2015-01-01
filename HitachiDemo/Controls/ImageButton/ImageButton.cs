@@ -90,6 +90,7 @@ namespace HitachiDemo.Controls
         }
 
         public bool HasLineBreak { get; set; }
+        public Rectangle ImageEdgeInsets { get; set; }
         
     }
 }

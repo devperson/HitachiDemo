@@ -14,8 +14,8 @@ namespace HitachiDemo.Pages
         private bool showHome1 = true;
         private ContentView middleContent = new ContentView();
         private Grid popupLayout;
-        private Button btnMenu;
-        private Button btnLogo;
+        private Button btnMenu, btnLogo;
+        private GreyButton btnBenefit;
         public HomePage()
         {            
             this.Initialize();
@@ -32,6 +32,11 @@ namespace HitachiDemo.Pages
                 {
                     showHome1 = !showHome1;
                     middleContent.Content = this.GetMiddleContent();
+                };
+
+            btnBenefit.Clicked += (s, e) =>
+                {
+                    this.Navigation.PushAsync(new ScreensCarouselPage(1), true);
                 };
         }
 
@@ -167,12 +172,12 @@ namespace HitachiDemo.Pages
             footerLayout.RowDefinitions.Add(new RowDefinition());
             footerLayout.RowDefinitions.Add(new RowDefinition());
             footerLayout.HeightRequest = 200;
-            footerLayout.Children.Add(this.CreateFooterButton("View your account", 0, "account.png"), 0, 1, 0, 1);
-            footerLayout.Children.Add(this.CreateFooterButton("VIP Members Club",1,"vip.png"), 1, 2, 0, 1);
-            footerLayout.Children.Add(this.CreateFooterButton("Make reservations",2,"reservation.png"), 2, 3, 0, 1);
-            footerLayout.Children.Add(this.CreateFooterButton("Your Favorites", 3, "favorate.png"), 0, 1, 1, 2);
-            footerLayout.Children.Add(this.CreateFooterButton("Messages",4, "msg.png"), 1, 2, 1, 2);
-            footerLayout.Children.Add(this.CreateFooterButton("Get a gift card", 5, "gift.png"), 2, 3, 1, 2);
+            footerLayout.Children.Add(this.CreateFooterButton("My Account", 0, "account.png"), 0, 1, 0, 1);
+            footerLayout.Children.Add(this.CreateFooterButton("VIP Club", 1, "vip.png"), 1, 2, 0, 1);
+            footerLayout.Children.Add(this.CreateFooterButton("Reservations", 2, "reservation.png"), 2, 3, 0, 1);
+            footerLayout.Children.Add(this.CreateFooterButton("Favorites", 3, "favorate.png"), 0, 1, 1, 2);
+            footerLayout.Children.Add(this.CreateFooterButton("Messages", 4, "msg.png"), 1, 2, 1, 2);
+            footerLayout.Children.Add(this.CreateFooterButton("Gift Cards", 5, "gift.png"), 2, 3, 1, 2);
             return footerLayout;
         }
 
@@ -212,11 +217,9 @@ namespace HitachiDemo.Pages
                     FontSize = 14
                 }
             }, 0, 2);
-            layout.Children.Add(new ContentView()
-            {
-                Padding = new Thickness(10, 5, 5, 10),
-                HorizontalOptions = LayoutOptions.Start,
-                Content = new GreyButton()
+
+            
+            btnBenefit = new GreyButton()
                 {
                     Text = "Find more VIP Benefits",
                     FontSize = 12,
@@ -224,13 +227,19 @@ namespace HitachiDemo.Pages
                     ImageName = "greyBtn.png",
                     WidthRequest = 160,
                     HeightRequest = 35
-                }
+                };
+
+            layout.Children.Add(new ContentView()
+            {
+                Padding = new Thickness(10, 5, 5, 10),
+                HorizontalOptions = LayoutOptions.Start,
+                Content = btnBenefit
             }, 0, 3);       
 
             return layout;
         }
 
-        private View CreateFooterButton(string text, int index, string imageName)//, double imgHeight, double imgWidth)
+        private StackLayout CreateFooterButton(string text, int index, string imageName)//, double imgHeight, double imgWidth)
         {
             StackLayout panel = new StackLayout() { BackgroundColor = Color.Red, Padding = new Thickness(0, 10, 0, 0) };
             var button = new ImageButton
@@ -238,19 +247,24 @@ namespace HitachiDemo.Pages
                 ImageHeightRequest = 40,
                 ImageWidthRequest = 40,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
                 Orientation = ImageOrientation.ImageOnTop,
                 Text = text,
-                FontSize = 10,
+                FontSize = 13,
                 TextColor = Color.White,
                 BackgroundColor = Color.Transparent,
                 Source = ImageSource.FromFile(imageName)
             };
+            
             button.Clicked += (s, e) =>
             {
 
                 this.Navigation.PushAsync(new ScreensCarouselPage(index), true);
                 //this.Navigation.PushAsync(new ScreensCarouselPage(index), true);
             };
+
+            if (text.StartsWith("My") || text.StartsWith("Gift"))
+                button.ImageEdgeInsets = new Rectangle(0, 28, 0, 0);
             panel.Children.Add(button);
             return panel;
         }        
