@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ContosoBeacons.Pages.MarkLocationPage">
+             x:Class="ContosoBeacons.Pages.MarkLocationPage" Title = "Mark Location">
   <ScrollView HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
     <StackLayout Spacing = "0" Padding = "0,0,0,15" Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
-      <Grid Padding = "5,10,15,25" ColumnSpacing = "7" RowSpacing = "15" VerticalOptions = "Start">
+      <Grid Padding = "25,20,15,25" ColumnSpacing = "7" RowSpacing = "15" VerticalOptions = "Start">
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
@@ -15,9 +15,19 @@
           <ColumnDefinition Width="Auto"/>
           <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <Label Text="Mark Location" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-        <Label Text=""/>
+        
+        <Label Text="Location:" Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+        <Entry x:Name="txtLocation" Grid.Row="0" Grid.Column="1" Text="{Binding Location}" />
+        
+        <Label Text="Latitude:" Grid.Row="1" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+        <Entry x:Name="txtLatitude" Grid.Row="1" Grid.Column="1" Text="{Binding Latitude}"  IsEnabled="False" />
+        
+        <Label Text="Longitude:" Grid.Row="2" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+        <Entry x:Name="txtLongitude" Grid.Row="2" Grid.Column="1" Text="{Binding Longitude}" IsEnabled="False"/>
+        
+        <ContentView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Padding="0,5,0,0">
+          <Button x:Name="btnSave" Text="Save" WidthRequest="150" HeightRequest="40"/>
+        </ContentView>
       </Grid>
     </StackLayout>
   </ScrollView>
