@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ContosoBeacons.Pages.ScreenPage1">
-  <Grid RowSpacing="0">
+             x:Class="ContosoBeacons.Pages.ScreenPage1"
+             >
+  
+  <Grid RowSpacing="0" Padding="0,20,0,0">
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
       <RowDefinition />
     </Grid.RowDefinitions>
-    <Grid>
+    
+    <Grid WidthRequest="50" BackgroundColor="Black">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="3"/>
         <ColumnDefinition Width="Auto"/>
@@ -17,14 +20,13 @@
         <ColumnDefinition Width="3"/>
       </Grid.ColumnDefinitions>
 
-      <Button Image="backArrow.jpg" Grid.Column="1" Clicked="btnBack_Clicked"/>
+      <Button Image="backArrow.jpg" Grid.Column="1" Clicked="btnBack_Clicked" WidthRequest="50" HeightRequest="50"/>
       <Image Source="logo.png" Grid.Column="3"  />
       <Button Text="Hitachi Consulting" TextColor="White" FontSize="12" HorizontalOptions="Center" Grid.Column="4" />
-    </Grid>
+    </Grid>      
     
+    <Image Grid.Row="1" Source="sample.jpg" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+    <Label Grid.Row="1" Text="" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="20"/>
     
-    
-    <Image Source="sample.jpg" Aspect="AspectFill" VerticalOptions="Fill" HorizontalOptions="Fill"/>
-    <Label Text="" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="20"/>
   </Grid>
 </ContentPage>

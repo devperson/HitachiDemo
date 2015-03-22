@@ -27,7 +27,8 @@ namespace ContosoBeacons.Pages
 
         public void btnMenu_Clicked(object sender, EventArgs e)
         {
-
+            var masterDetail = this.Parent as MasterDetailPage;
+            masterDetail.IsPresented = !masterDetail.IsPresented;
         }
 
 
