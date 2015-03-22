@@ -17,7 +17,7 @@ namespace ContosoBeacons.Pages
 
         private void btnBack_Clicked(object sender, EventArgs e)
         {
-            
+            this.Navigation.PopAsync(true);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ContosoBeacons
 		public static Page GetMainPage ()
 		{
             
-            return new NavigationPage(new HomePage()) { };
+            return new NavigationPage(new HomePage());
 		}
 	}
 }

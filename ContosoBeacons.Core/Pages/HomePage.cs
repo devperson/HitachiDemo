@@ -63,8 +63,8 @@ namespace ContosoBeacons.Pages
             //mainLayout.Children.Add(popupLayout, 0, 1);
             //this.Content = mainLayout;
 
-            this.Master = new LandingPage();
-            this.Detail = new ContentPage { Content = new ListView { ItemsSource = new List<string> { "Mark Location", "Settings", "About" } } };
+            this.Master = new ContentPage { Content = new ListView { ItemsSource = new List<string> { "Mark Location", "Settings", "About" } }, Title = "Menu" };
+            this.Detail = new LandingPage();
             NavigationPage.SetHasNavigationBar(this, false);
         }
 

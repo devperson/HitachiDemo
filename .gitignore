@@ -16,3 +16,4 @@
 /packages/repositories.config
 /packages
 /iOS/Resources/Thumbs.db
+/ContosoBeacons.Core/ContosoBeacons.csproj.user

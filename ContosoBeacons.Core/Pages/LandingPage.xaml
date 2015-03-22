@@ -21,8 +21,8 @@
         <ColumnDefinition Width="3"/>
       </Grid.ColumnDefinitions>
       <Button Image="menu.png" Grid.Column="1" />
-      <Image Source="logo.png" Grid.Column="3" Clicked="btnLogo_Clicked" />
-      <Button Text="Hitachi Consulting" TextColor="White" FontSize="12" HorizontalOptions="Center" Grid.Column="4" />
+      <Image Source="logo.png" Grid.Column="3" />
+      <Button Text="Hitachi Consulting" TextColor="White" FontSize="12" HorizontalOptions="Center" Grid.Column="4" Clicked="btnLogo_Clicked"/>
     </Grid>
 
     <Grid Grid.Row="1" >

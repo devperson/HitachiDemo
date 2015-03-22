@@ -14,17 +14,18 @@ namespace ContosoBeacons.Pages
         public LandingPage()
         {
             InitializeComponent();
+            
             this.SetupFooterContent();
             middleContent.Content = this.GetMiddleContent();
         }
 
-        private void btnLogo_Clicked(object sender, EventArgs e)
+        public void btnLogo_Clicked(object sender, EventArgs e)
         {
             showHome = !showHome;
             middleContent.Content = this.GetMiddleContent();
         }
 
-        private void btnMenu_Clicked(object sender, EventArgs e)
+        public void btnMenu_Clicked(object sender, EventArgs e)
         {
 
         }
@@ -154,8 +155,23 @@ namespace ContosoBeacons.Pages
                     case 0:
                         this.Navigation.PushAsync(new ScreenPage1(), true);
                         break;
+                    case 1:
+                        this.Navigation.PushAsync(new ScreenPage2(), true);
+                        break;
+                    case 2:
+                        this.Navigation.PushAsync(new ScreenPage3(), true);
+                        break;
+                    case 3:
+                        this.Navigation.PushAsync(new ScreenPage4(), true);
+                        break;
+                    case 4:
+                        this.Navigation.PushAsync(new ScreenPage5(), true);
+                        break;
+                    case 5:
+                        this.Navigation.PushAsync(new ScreenPage6(), true);
+                        break;
                 }
-                this.Navigation.PushAsync(new ScreensCarouselPage(index), true);
+                //this.Navigation.PushAsync(new ScreensCarouselPage(index), true);
             };
 
             if (text.StartsWith("My") || text.StartsWith("Gift"))
