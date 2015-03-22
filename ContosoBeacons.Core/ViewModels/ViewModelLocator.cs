@@ -29,5 +29,16 @@ namespace ContosoBeacons.ViewModels
                 return _screensViewModel;
             }
         }
+
+        MenuListViewModel _menuVM;
+        public MenuListViewModel MenuVM
+        {
+            get
+            {
+                if (_menuVM == null)
+                    _menuVM = new MenuListViewModel();
+                return _menuVM;
+            }
+        }
     }
 }
