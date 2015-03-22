@@ -29,8 +29,19 @@ namespace ContosoBeacons.Pages
         {
             var masterDetail = this.Parent as MasterDetailPage;
             masterDetail.IsPresented = !masterDetail.IsPresented;
+
+            //this.Navigation.PushAsync(new PopupScreen());
         }
 
+        private void SetupFooterContent()
+        {            
+            footerLayout.Children.Add(this.CreateFooterButton("My Account", 0, "account.png"), 0, 1, 0, 1);
+            footerLayout.Children.Add(this.CreateFooterButton("VIP Club", 1, "vip.png"), 1, 2, 0, 1);
+            footerLayout.Children.Add(this.CreateFooterButton("Reservations", 2, "reservation.png"), 2, 3, 0, 1);
+            footerLayout.Children.Add(this.CreateFooterButton("Favorites", 3, "favorate.png"), 0, 1, 1, 2);
+            footerLayout.Children.Add(this.CreateFooterButton("Messages", 4, "msg.png"), 1, 2, 1, 2);
+            footerLayout.Children.Add(this.CreateFooterButton("Gift Cards", 5, "gift.png"), 2, 3, 1, 2);         
+        }
 
         private View GetMiddleContent()
         {
@@ -95,26 +106,6 @@ namespace ContosoBeacons.Pages
 
                 return contentLayout;
             }
-        }
-
-        private void SetupFooterContent()
-        {
-            //Grid footerLayout = new Grid();
-            //footerLayout.RowSpacing = 7;
-            //footerLayout.ColumnSpacing = 7;
-            //footerLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            //footerLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            //footerLayout.ColumnDefinitions.Add(new ColumnDefinition());
-            //footerLayout.RowDefinitions.Add(new RowDefinition());
-            //footerLayout.RowDefinitions.Add(new RowDefinition());
-            //footerLayout.HeightRequest = 200;
-            footerLayout.Children.Add(this.CreateFooterButton("My Account", 0, "account.png"), 0, 1, 0, 1);
-            footerLayout.Children.Add(this.CreateFooterButton("VIP Club", 1, "vip.png"), 1, 2, 0, 1);
-            footerLayout.Children.Add(this.CreateFooterButton("Reservations", 2, "reservation.png"), 2, 3, 0, 1);
-            footerLayout.Children.Add(this.CreateFooterButton("Favorites", 3, "favorate.png"), 0, 1, 1, 2);
-            footerLayout.Children.Add(this.CreateFooterButton("Messages", 4, "msg.png"), 1, 2, 1, 2);
-            footerLayout.Children.Add(this.CreateFooterButton("Gift Cards", 5, "gift.png"), 2, 3, 1, 2);
-            //return footerLayout;
         }
 
         private View CreateFooterButton(string text, int index, string imageName)//, double imgHeight, double imgWidth)

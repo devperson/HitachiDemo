@@ -13,6 +13,7 @@ namespace ContosoBeacons.Pages
         public PopupScreen()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

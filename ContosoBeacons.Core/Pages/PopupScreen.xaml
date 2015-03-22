@@ -4,14 +4,14 @@
              xmlns:local="clr-namespace:ContosoBeacons.Pages;assembly=ContosoBeacons"
              xmlns:controls="clr-namespace:ContosoBeacons.Controls;assembly=ContosoBeacons"
              x:Class="ContosoBeacons.Pages.PopupScreen">
-  <Grid>
+  <Grid Padding="0,20,0,0">
     <Grid.RowDefinitions>
       <RowDefinition />
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
-    <controls:SwipedImage Source="popup.png" Grid.RowSpan="4"  Aspect="AspectFill" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand"/>
+    <Image Source="popup.png" Grid.RowSpan="4"  Aspect="AspectFill" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand"/>
     <ContentView Grid.Row="1" Padding="10,5,5,5">
       <Label Text="Welcome back to the Hitachi Casino, Nathan." TextColor="White" FontSize="25"></Label>
     </ContentView>

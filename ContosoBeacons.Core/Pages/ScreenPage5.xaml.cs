@@ -13,6 +13,13 @@ namespace ContosoBeacons.Pages
         public ScreenPage5()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private void btnBack_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PopAsync(true);
         }
     }
 }
