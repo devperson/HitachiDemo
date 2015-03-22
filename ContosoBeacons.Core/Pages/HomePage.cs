@@ -18,7 +18,8 @@ namespace ContosoBeacons.Pages
 
         private void Initialize()
         {            
-            this.Master = new ContentPage { Content = new ListView { ItemsSource = new List<string> { "Mark Location", "Settings", "About" }, BackgroundColor = Color.Gray }, Title = "Menu" };
+            //this.Master = new ContentPage { Content = new ListView { ItemsSource = new List<string> { "Mark Location", "Settings", "About" }, BackgroundColor = Color.Gray }, Title = "Menu" };
+            //this.Master = new MenuPage();
             this.Detail = new LandingPage();
             NavigationPage.SetHasNavigationBar(this, false);
         }
