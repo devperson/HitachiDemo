@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ContosoBeacons.Pages;assembly=ContosoBeacons"
+             xmlns:controls="clr-namespace:ContosoBeacons.Controls;assembly=ContosoBeacons"
+             x:Class="ContosoBeacons.Pages.LandingPage">
+
+  <Grid RowSpacing="0" BackgroundColor="White">
+    <Grid.RowDefinitions>      
+      <RowDefinition Height="Auto"/>
+      <RowDefinition />
+    </Grid.RowDefinitions>
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition />
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="3"/>
+      </Grid.ColumnDefinitions>
+      <Button Image="menu.png" Grid.Column="1" />
+      <Image Source="logo.png" Grid.Column="3" Clicked="btnLogo_Clicked" />
+      <Button Text="Hitachi Consulting" TextColor="White" FontSize="12" HorizontalOptions="Center" Grid.Column="4" />
+    </Grid>
+
+    <Grid Grid.Row="1" >
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <ContentView Padding="5" x:Name="middleContent" />      
+      
+      <ContentView Grid.Row="1" Padding="5, 0, 5, 5">
+        <Grid x:Name="footerLayout" RowSpacing="7" ColumnSpacing="7" HeightRequest="200">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+          </Grid.RowDefinitions>          
+        </Grid>
+      </ContentView>
+    </Grid>
+  </Grid>
+</ContentPage>

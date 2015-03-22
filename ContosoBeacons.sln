@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoBeacons.iOS", "iOS\ContosoBeacons.iOS.csproj", "{62D37D1A-F026-413F-9ED3-333BACB0307B}"
 EndProject
@@ -49,6 +49,7 @@ Global
 		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Debug|iPhone.Build.0 = Debug|iPhone
 		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
 		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
 		{62D37D1A-F026-413F-9ED3-333BACB0307B}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
@@ -82,7 +83,6 @@ Global
 		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{90AC4C2B-DC7C-497A-95C6-A7226F1A7DB8}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
@@ -111,19 +111,21 @@ Global
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B3AAAC38-6B5C-4705-BD1D-F69CACEB475B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\ContosoBeacons.iOS.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = iOS\ContosoBeacons.iOS.csproj
 	EndGlobalSection
 EndGlobal

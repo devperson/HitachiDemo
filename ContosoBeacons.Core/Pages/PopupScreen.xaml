@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ContosoBeacons.Pages;assembly=ContosoBeacons"
+             xmlns:controls="clr-namespace:ContosoBeacons.Controls;assembly=ContosoBeacons"
+             x:Class="ContosoBeacons.Pages.PopupScreen">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <controls:SwipedImage Source="popup.png" Grid.RowSpan="4"  Aspect="AspectFill" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand"/>
+    <ContentView Grid.Row="1" Padding="10,5,5,5">
+      <Label Text="Welcome back to the Hitachi Casino, Nathan." TextColor="White" FontSize="25"></Label>
+    </ContentView>
+    <ContentView Grid.Row="2" Padding="10,5,5,10">
+      <Label Text="Please proceed to the VIP services desk, located to the left as you enter the lobby." TextColor="White" FontSize="14"></Label>
+    </ContentView>
+    <ContentView Grid.Row="3" Padding="10,5,5,10" HorizontalOptions="Start">
+      <controls:GreyButton Text="Find more VIP Benefits" FontSize="12" ImageName="greyBtn.png" WidthRequest="160" HeightRequest="35"/>
+    </ContentView>
+  </Grid>
+</ContentPage>

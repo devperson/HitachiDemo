@@ -13,3 +13,6 @@
 /.DS_Store
 /ContosoBeacons.Core/obj
 /ContosoBeacons.Core/bin
+/packages/repositories.config
+/packages
+/iOS/Resources/Thumbs.db

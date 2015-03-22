@@ -7,8 +7,8 @@ using Foundation;
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
-using ContosoBeacons.Pages;
 using ContosoBeacons.iOS.Renderers;
+using ContosoBeacons.Controls;
 
 [assembly: ExportRenderer(typeof(SwipedImage), typeof(SwipedImageRenderer))]
 namespace ContosoBeacons.iOS.Renderers

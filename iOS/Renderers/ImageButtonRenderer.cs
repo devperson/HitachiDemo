@@ -51,7 +51,7 @@ namespace ContosoBeacons.iOS.Renderers
             var imageButton = this.CurrentImageButton;
             var targetButton = Control;
             if (imageButton != null && targetButton != null && imageButton.Source != null)
-            {
+            {                
                 if (imageButton.HasLineBreak)
                 {                    
                     targetButton.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap | UILineBreakMode.TailTruncation;
