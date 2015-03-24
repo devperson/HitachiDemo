@@ -14,7 +14,9 @@ namespace ContosoBeacons.Pages
         public SettingsPage()
         {
             InitializeComponent();
-            this.BindingContext = App.Locator.MenuVM.SettingFromCache;
+
+            App.Locator.MenuVM.LoadSettings();
+            this.BindingContext = App.Locator.MenuVM.CurrentSetting;
 
             btnUpdate.Clicked += (s, e) =>
                 {
